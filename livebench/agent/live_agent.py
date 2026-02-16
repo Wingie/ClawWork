@@ -107,7 +107,13 @@ class LiveAgent:
             supports_multimodal: Whether the model supports multimodal (image) inputs
         """
         self.signature = signature
-        self.basemodel = basemodel
+        # Allow overriding model via environment variable
+        env_model = os.getenv("OPENAI_MODEL")
+        if env_model:
+            self.basemodel = env_model
+            print(f"🔧 Using model from environment: {self.basemodel}")
+        else:
+            self.basemodel = basemodel
         self.max_steps = max_steps
         self.max_retries = max_retries
         self.base_delay = base_delay

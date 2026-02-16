@@ -69,11 +69,11 @@ export LIVEBENCH_HTTP_PORT=${LIVEBENCH_HTTP_PORT:-8010}
 export PYTHONPATH="/root/-Live-Bench:$PYTHONPATH"
 
 # Extract agent info from config (basic parsing)
-AGENT_NAME=$(grep -oP '"signature"\s*:\s*"\K[^"]+' "$CONFIG_FILE" | head -1)
-BASEMODEL=$(grep -oP '"basemodel"\s*:\s*"\K[^"]+' "$CONFIG_FILE" | head -1)
-INIT_DATE=$(grep -oP '"init_date"\s*:\s*"\K[^"]+' "$CONFIG_FILE" | head -1)
-END_DATE=$(grep -oP '"end_date"\s*:\s*"\K[^"]+' "$CONFIG_FILE" | head -1)
-INITIAL_BALANCE=$(grep -oP '"initial_balance"\s*:\s*\K[0-9.]+' "$CONFIG_FILE" | head -1)
+AGENT_NAME=$(python3 -c "import json; print(json.load(open('$CONFIG_FILE')).get('signature', 'unknown'))")
+BASEMODEL=$(python3 -c "import json; print(json.load(open('$CONFIG_FILE')).get('basemodel', 'unknown'))")
+INIT_DATE=$(python3 -c "import json; print(json.load(open('$CONFIG_FILE')).get('init_date', 'N/A'))")
+END_DATE=$(python3 -c "import json; print(json.load(open('$CONFIG_FILE')).get('end_date', 'N/A'))")
+INITIAL_BALANCE=$(python3 -c "import json; print(json.load(open('$CONFIG_FILE')).get('initial_balance', 1000))")
 
 echo "===================================="
 echo "🤖 Running Agent"
