@@ -37,3 +37,7 @@ openpyxl>=3.1.0
 xlsxwriter>=3.1.0
 pdf2image>=1.16.0
 Pillow>=10.0.0
+PyPDF2>=3.0.0  # Required for PDF processing tools
+
+# Beta9 Integration
+beta9>=0.1.0
