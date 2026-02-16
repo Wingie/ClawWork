@@ -6,6 +6,8 @@
     <img src="https://img.shields.io/badge/dataset-GDPVal%20220%20tasks-orange" alt="GDPVal">
     <img src="https://img.shields.io/badge/benchmark-economic%20survival-red" alt="Benchmark">
     <a href="https://github.com/HKUDS/nanobot"><img src="https://img.shields.io/badge/nanobot-integration-C5EAB4?style=flat&logo=github&logoColor=white" alt="nanobot"></a>
+    <a href="./COMMUNICATION.md"><img src="https://img.shields.io/badge/Feishu-Group-E9DBFC?style=flat&logo=feishu&logoColor=white" alt="Feishu"></a>
+    <a href="./COMMUNICATION.md"><img src="https://img.shields.io/badge/WeChat-Group-C5EAB4?style=flat&logo=wechat&logoColor=white" alt="WeChat"></a>
   </p>
   <h3>💰 $10K in 7 Hours — AI Coworker for 44+ Professions</h3>
   <h4>| Technology & Engineering | Business & Finance | Healthcare & Social Services | Legal, Media & Operations | </h3>
